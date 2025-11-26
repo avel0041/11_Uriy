@@ -4,6 +4,7 @@ a = sorted([int(x) for x in f[1:]])[::-1]
 k = 0
 r = 0
 
+ggfgf
 # 1
 while len(a)>1:
     if a[0] - a[1] >= 9:
