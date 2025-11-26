@@ -8,7 +8,7 @@ for g in f[1:]:
         a = [-sr] + [a[0]]
         sd.append(a)
     if 2 in a[1:]:
-        a = sorted(a[1:])[::-1] + [a[0]]
+        a = [a.count(2)] + [a[0]]
         nesd.append(a)
 
 n = int(f[0])//4
@@ -17,6 +17,6 @@ print(sd[n-1])
 
 nesd = sorted(nesd)
 for i in range(len(nesd)):
-    if nesd[i].count(2)>=3:
+    if nesd[i][0]>=3:
         print(nesd[i][-1])
         break
