@@ -1,22 +1,51 @@
-f = open('C:/Users/Юрий/Desktop/sadaf/11_Uriy/26_8.txt').readlines()
-sd = []
-nesd = []
-for g in f[1:]:
-    a = [int(x) for x in g.split()]
-    if 2 not in a[1:]:
-        sr = (sum(a[1:]))/4
-        a = [-sr] + [a[0]]
-        sd.append(a)
-    if 2 in a[1:]:
-        a = [a.count(2)] + [a[0]]
-        nesd.append(a)
+# #1
+# f = open('26_9.txt').readlines()
+# c=0
+# r = ''
+# rabd = []
+# rabg = []
 
-n = int(f[0])//4
-sd = sorted(sd)
-print(sd[n-1])
+# for s in f[1:]:
+#     c = int(s.split()[0])
+#     r = str(s.split()[1])
+#     if r == 'D':
+#         rabd.append(c)
+#     if r == 'G':
+#         rabg.append(c)
 
-nesd = sorted(nesd)
-for i in range(len(nesd)):
-    if nesd[i][0]>=3:
-        print(nesd[i][-1])
-        break
+# rabd = sorted(rabd)[::-1]
+# rabg = sorted(rabg)[::-1]
+
+# k = 0
+# su = 0
+
+# for i in range(len(rabd)):
+#     if su<=2035:
+#         su += rabd[i]
+#         k+=1
+#     else:
+#         su = su - rabd[i-1]
+#         k-=1
+#         for n in range(2, 1000):
+#             if 2035-su<=rabg[0]:
+#                 su = su - rabd[i-n]
+#                 k-=1
+#             else:
+#                 su += rabg[0]
+#                 break
+            
+# print(k, 2035-su)
+
+# #2
+# f = open('26_10.txt').readlines()[1:199156]
+
+# a = [int(x) for x in f[1:199156]]
+# data = []
+
+# for s in f[199156:]:
+#     m, p = [int(x) for x in s.split()]
+#     data.append([p, m])
+
+# for i in range(len(a)):
+    
+f = open('26_11.txt').readlines()
