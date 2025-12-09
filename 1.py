@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # #1
 # f = open('26_9.txt').readlines()[1:]
 
@@ -226,3 +227,58 @@ for i in range(len(a)-1, -1, -1):
 print(len(k), mas)
 #568 50 
 
+=======
+from itertools import*
+k = 0
+for x in product('01', repeat = 14):
+    a = ''.join(x)
+    if a.count('1')+5>a.count('0')+13:
+        k+=1
+print(k)
+>>>>>>> 5b6ad5c848cfab35d29994abf0de84b2eab8a61b
+
+# #3
+# f = open('26_3dz.txt').readlines()[1:]
+# n = 10000
+# r = 1021000
+# v = 11111
+
+# a = [int(x) for x in f]
+# u = 0
+# km = 0
+
+# for i in range(len(a)-1):
+#     if v>a[i+1]-a[i]:
+#         v = v - (a[i+1]-a[i])
+#     else:
+#         v = 11111-a[i+1]
+#         km = a[i+1]
+#         u+=1
+# print(u, km)
+# #9763 570123
+
+#4
+f = open('26_4dz.txt').readlines()[1:]
+
+s = 8200 #свободное место на диске
+n = 970 #пользователи
+
+a = sorted([int(x) for x in f])
+k = []
+r = 0
+
+for i in range(len(a)):
+    if sum(a[:i+1])<=s:
+        k.append(a[i])
+        r = s - sum(a[:i]) #оставшееся место без последнего файла
+    else: break
+
+mas = 0
+
+for i in range(len(a)-1, -1, -1):
+    if a[i]<=r:
+        mas = a[i]
+        break
+
+print(len(k), mas)
+#568 50 
