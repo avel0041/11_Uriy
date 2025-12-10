@@ -201,39 +201,68 @@
 # print(u, km)
 # #9763 570123
 
-#4
-f = open('26_4dz.txt').readlines()[1:]
+# #4
+# f = open('26_4dz.txt').readlines()[1:]
 
-s = 8200 #свободное место на диске
-n = 970 #пользователи
+# s = 8200 #свободное место на диске
+# n = 970 #пользователи
 
-a = sorted([int(x) for x in f])
-k = []
-r = 0
+# a = sorted([int(x) for x in f])
+# k = []
+# r = 0
 
-for i in range(len(a)):
-    if sum(a[:i+1])<=s:
-        k.append(a[i])
-        r = s - sum(a[:i]) #оставшееся место без последнего файла
-    else: break
+# for i in range(len(a)):
+#     if sum(a[:i+1])<=s:
+#         k.append(a[i])
+#         r = s - sum(a[:i]) #оставшееся место без последнего файла
+#     else: break
 
-mas = 0
+# mas = 0
 
-for i in range(len(a)-1, -1, -1):
-    if a[i]<=r:
-        mas = a[i]
-        break
+# for i in range(len(a)-1, -1, -1):
+#     if a[i]<=r:
+#         mas = a[i]
+#         break
 
-print(len(k), mas)
+# print(len(k), mas)
 #568 50 
 
-# #3
+
+
+# #4
+# f = open('26_4dz.txt').readlines()[1:]
+
+# s = 8200 #свободное место на диске
+# n = 970 #пользователи
+
+# a = sorted([int(x) for x in f])
+# k = []
+# r = 0
+
+# for i in range(len(a)):
+#     if sum(a[:i+1])<=s:
+#         k.append(a[i])
+#         r = s - sum(a[:i]) #оставшееся место без последнего файла
+#     else: break
+
+# mas = 0
+
+# for i in range(len(a)-1, -1, -1):
+#     if a[i]<=r:
+#         mas = a[i]
+#         break
+
+# print(len(k), mas)
+# #568 50 
+
+
+#3
 # f = open('26_3dz.txt').readlines()[1:]
 # n = 10000
 # r = 1021000
 # v = 11111
 
-# a = [int(x) for x in f]
+# a = sorted([int(x) for x in f])
 # u = 0
 # km = 0
 
@@ -241,34 +270,41 @@ print(len(k), mas)
 #     if v>a[i+1]-a[i]:
 #         v = v - (a[i+1]-a[i])
 #     else:
-#         v = 11111-a[i+1]
+#         v = 11111-(a[i+1]-a[i])
 #         km = a[i+1]
 #         u+=1
+
+# for i in range(len(a)-1, -1, -1):
+#     if r-a[i]<=11111:
+#         km = a[i]
+#     else: break
 # print(u, km)
-# #9763 570123
+#9763 570123
 
-#4
-f = open('26_4dz.txt').readlines()[1:]
 
-s = 8200 #свободное место на диске
-n = 970 #пользователи
+from turtle import *
+color('black', 'red')
+speed(100)
+tracer(0)
+left(90)
+k = 10
+pd()
+#begin_fill()
+for i in range(3):
+    fd(10*k)
+    rt(120)
+#end_fill()
+pu()
+#c = getcanvas()
+k1 = 0
+for x in range(-100*k, 100*k, k):
+    for y in range(-100*k, 100*k, k):
+        goto(x, y)
+        dot(2, 'red')
+        # s = c.find_overlapping(x,y,x,y)
+        # if len(s)==1 and s[0] == 5:
+        #     k1+=1
+#print(k1)
 
-a = sorted([int(x) for x in f])
-k = []
-r = 0
-
-for i in range(len(a)):
-    if sum(a[:i+1])<=s:
-        k.append(a[i])
-        r = s - sum(a[:i]) #оставшееся место без последнего файла
-    else: break
-
-mas = 0
-
-for i in range(len(a)-1, -1, -1):
-    if a[i]<=r:
-        mas = a[i]
-        break
-
-print(len(k), mas)
-#568 50 
+done()
+exit()
